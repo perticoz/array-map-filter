@@ -60,9 +60,14 @@ En sortie:
  */
 
 function getMoviesFreshness(movies) {
+  return movies.map( (movie)=> {
+          let lable = movie.rating >= 60 ? movie.rating > 75 ? 'certified fresh' : 'fresh' : 'rotten';
+          return name: ${movie.name},
+          rating: ${movie.rating},
+          label: ${lable}`
+  })
 }
 
 
 
-// Ne pas modifier l'export
 module.exports = getMoviesFreshness;

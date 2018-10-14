@@ -16,7 +16,13 @@ Exemple d'entrée:
  */
 
 function getMultiplesOf(numbers, n) {
+	let x = numbers.filter( (num) => {
+		return num%n == 0;
+	})
+	return x;
 }
+
+console.log(getMultiplesOf([-12, -10, -7, -1, 5, 8, 11, 15, 20, 27]))
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;
