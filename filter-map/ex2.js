@@ -25,6 +25,10 @@ Sortie attendue:
 */
 
 function getCampusesTeachingReact(campuses) {
+	return campuses.filter( langue => {for (let i = 0; i<langue.curriculums.length; i++)
+									  { if(langue.curriculums[i]=='JS/React'){return true}}})
+									  .map( ville => {return ville.city})
+
 }
 
 module.exports = getCampusesTeachingReact;
